@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iBo-Gz-N5l">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Purist MVVM Approach-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PuristMVVMSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ix-yk-OwM">
+                                <rect key="frame" x="96.5" y="126.5" width="97" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="vTb-LO-DXS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="6qY-RQ-ZID"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Input:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lb8-ga-Fft">
+                                <rect key="frame" x="34" y="133" width="48.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86s-J7-esO">
+                                <rect key="frame" x="34" y="171" width="63" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="58" id="Wno-vc-Zzx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Value&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNi-4u-gzS">
+                                <rect key="frame" x="105" y="171" width="63.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Lb8-ga-Fft" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="MZ1-MB-RF9"/>
+                            <constraint firstItem="86s-J7-esO" firstAttribute="top" secondItem="Lb8-ga-Fft" secondAttribute="bottom" constant="17" id="PFP-lo-d7s"/>
+                            <constraint firstItem="8ix-yk-OwM" firstAttribute="centerY" secondItem="Lb8-ga-Fft" secondAttribute="centerY" id="Pmg-gC-CWk"/>
+                            <constraint firstItem="Lb8-ga-Fft" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="T22-5s-XPm"/>
+                            <constraint firstItem="vNi-4u-gzS" firstAttribute="centerY" secondItem="86s-J7-esO" secondAttribute="centerY" id="eeL-5I-LhB"/>
+                            <constraint firstItem="8ix-yk-OwM" firstAttribute="leading" secondItem="Lb8-ga-Fft" secondAttribute="trailing" constant="14" id="jMT-Gb-9OV"/>
+                            <constraint firstItem="86s-J7-esO" firstAttribute="leading" secondItem="Lb8-ga-Fft" secondAttribute="leading" id="jcO-w9-2Sq"/>
+                            <constraint firstItem="vNi-4u-gzS" firstAttribute="leading" secondItem="86s-J7-esO" secondAttribute="trailing" constant="8" id="jcl-UM-4Ph"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Purist MVVM Approach" id="2mu-Cm-hSL"/>
+                    <connections>
+                        <outlet property="outLabel" destination="vNi-4u-gzS" id="IFl-Nn-P6d"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="588" y="121"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="sMZ-tF-Xer">
+            <objects>
+                <navigationController id="iBo-Gz-N5l" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zzj-Yf-ACU">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4Z4-c0-G6R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vnn-HG-vhT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-241" y="121"/>
+        </scene>
+    </scenes>
+</document>

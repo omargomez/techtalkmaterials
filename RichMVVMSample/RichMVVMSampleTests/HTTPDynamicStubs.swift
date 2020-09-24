@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Swifter
+//import Swifter
 
 enum HTTPMethod {
     case POST

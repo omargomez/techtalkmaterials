@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ayj-Cw-AWK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Simple Money Converter-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RichMVVMSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mnc-O4-rKM">
+                                <rect key="frame" x="20" y="129" width="186.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onAmoutChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="93X-3B-4ON"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ELZ-vm-h8q">
+                                <rect key="frame" x="215" y="131" width="187" height="30"/>
+                                <state key="normal" title="from"/>
+                                <connections>
+                                    <action selector="onFromAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="79t-Nd-Fax"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zc7-sh-loJ">
+                                <rect key="frame" x="20" y="173" width="186.5" height="30"/>
+                                <state key="normal" title="to"/>
+                                <connections>
+                                    <action selector="onToAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qrP-19-sis"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kv6-dd-VQT">
+                                <rect key="frame" x="215" y="175" width="187" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ELZ-vm-h8q" secondAttribute="trailing" constant="12" id="0MC-kq-7iO"/>
+                            <constraint firstItem="ELZ-vm-h8q" firstAttribute="leading" secondItem="mnc-O4-rKM" secondAttribute="trailing" constant="8.5" id="Esa-IL-NQh"/>
+                            <constraint firstItem="mnc-O4-rKM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.45" id="Ihd-Ud-gGr"/>
+                            <constraint firstItem="Zc7-sh-loJ" firstAttribute="leading" secondItem="mnc-O4-rKM" secondAttribute="leading" id="Nqy-1E-6ZR"/>
+                            <constraint firstItem="mnc-O4-rKM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="Q3l-vz-iie"/>
+                            <constraint firstItem="Kv6-dd-VQT" firstAttribute="leading" secondItem="ELZ-vm-h8q" secondAttribute="leading" id="W6N-cd-TJX"/>
+                            <constraint firstItem="ELZ-vm-h8q" firstAttribute="centerY" secondItem="mnc-O4-rKM" secondAttribute="centerY" id="lLb-WA-GHv"/>
+                            <constraint firstItem="Zc7-sh-loJ" firstAttribute="width" secondItem="mnc-O4-rKM" secondAttribute="width" id="mYd-hJ-k3N"/>
+                            <constraint firstItem="Kv6-dd-VQT" firstAttribute="centerY" secondItem="Zc7-sh-loJ" secondAttribute="centerY" id="o83-YM-JLm"/>
+                            <constraint firstItem="Zc7-sh-loJ" firstAttribute="top" secondItem="mnc-O4-rKM" secondAttribute="bottom" constant="10" id="s9x-bH-KiH"/>
+                            <constraint firstItem="Kv6-dd-VQT" firstAttribute="height" secondItem="Zc7-sh-loJ" secondAttribute="height" multiplier="0.866667" id="smL-fR-UMZ"/>
+                            <constraint firstItem="Kv6-dd-VQT" firstAttribute="trailing" secondItem="ELZ-vm-h8q" secondAttribute="trailing" id="vdI-nl-aW3"/>
+                            <constraint firstItem="mnc-O4-rKM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wtf-D9-ptV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Simple Money Converter" id="uLe-CB-rzg"/>
+                    <connections>
+                        <outlet property="amountLabel" destination="Kv6-dd-VQT" id="l4G-x5-LbE"/>
+                        <outlet property="fromButton" destination="ELZ-vm-h8q" id="afy-Sh-XXT"/>
+                        <outlet property="toButton" destination="Zc7-sh-loJ" id="S7f-gN-wIc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656.52173913043487" y="293.97321428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ajh-e8-iTn">
+            <objects>
+                <navigationController id="ayj-Cw-AWK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X6o-mh-Whb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ilp-ia-kwx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sme-Z7-VbT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-252" y="294"/>
+        </scene>
+    </scenes>
+</document>

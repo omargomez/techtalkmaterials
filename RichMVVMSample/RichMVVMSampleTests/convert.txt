@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "query": {
+    "from": "USD",
+    "to": "COP",
+    "amount": 1
+  },
+  "info": {
+    "rate": 3729.602739
+  },
+  "historical": false,
+  "date": "2020-09-17",
+  "result": 3729.602739
+}

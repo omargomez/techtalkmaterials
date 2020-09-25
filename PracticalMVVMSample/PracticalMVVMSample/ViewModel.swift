@@ -21,6 +21,7 @@ protocol ViewModelType {
 
 class ViewModel: ViewModelType {
     
+    // PassthroughRelay: Subscriber & Publisher at the same time ...
     typealias Input = PassthroughRelay<String>
     typealias Output = AnyPublisher<String, Never>
     
@@ -29,12 +30,8 @@ class ViewModel: ViewModelType {
     
     init() {
         
-        output = input
-            .filter({
-                $0 != ""
-            })
-            .map { self.toHEX($0) ?? "" }
-            .eraseToAnyPublisher()
+        // ViewModel should have been created first!
+        output = self.getOutput()
         
     }
     
@@ -45,6 +42,15 @@ class ViewModel: ViewModelType {
         }
         
         return String(format: "%02X", asNum)
+    }
+    
+    private func getOutput() -> AnyPublisher<String, Never> {
+        input
+            .filter({
+                $0 != ""
+            })
+            .map { self.toHEX($0) ?? "" }
+            .eraseToAnyPublisher()
     }
 }
 

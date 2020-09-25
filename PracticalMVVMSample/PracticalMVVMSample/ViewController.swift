@@ -25,6 +25,12 @@ class ViewController: UIViewController {
             .subscribe(self.viewModel.input)
             .store(in: &cancellables)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Outputs can be bind at a different time
         viewModel.output
             .sink(receiveValue: { value in
                 self.outLabel.text = value
